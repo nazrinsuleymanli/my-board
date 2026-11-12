@@ -1,0 +1,16 @@
+services:
+  myboard:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    volumes:
+      # Named volume (not a Windows folder): SQLite is reliable here on Docker Desktop for Windows.
+      # Backup:  docker compose cp myboard:/data .\backup
+      - myboard-data:/data
+    restart: unless-stopped
+
+volumes:
+  myboard-data:

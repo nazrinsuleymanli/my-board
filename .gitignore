@@ -1,0 +1,13 @@
+.env
+data/
+backend/data/
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+__pycache__/
+.pytest_cache/
+
+# personal study vlogs: keep them local only (upload via Settings or drop them in this folder)
+backend/app/seed_media/videos/*
+!backend/app/seed_media/videos/.gitkeep
